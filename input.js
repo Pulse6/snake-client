@@ -12,6 +12,9 @@ const handleUserInput = () => {
     if (key === '\u0003') {
       process.exit();
     }
+    if (key === 't') {
+      connection.write("Say: YES")
+    }
     if (key === 'w') {
       connection.write("Move: up")
     }
