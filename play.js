@@ -1,6 +1,6 @@
 // const net = require('net');
-const connect = require('./client');
-const connect = require('./input');
+const { connect } = require('./client');
+const { setupInput } = require('./input');
 
 /**
  * Establishes connection with the game server
@@ -16,7 +16,7 @@ const connect = require('./input');
 //   return conn;
 // }
 console.log('Connecting ...');
-connect();
+;
 /**
  * Setup User Interface 
  * Specifically, so that we can handle user input via stdin
@@ -24,4 +24,4 @@ connect();
 
 
 
-setupInput();
+setupInput(connect());
