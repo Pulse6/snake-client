@@ -12,9 +12,9 @@ const connect = function() {
   });
   conn.on('connect', () => {
     conn.write("Name: SIU");
-    setInterval(() => {
-      conn.write("Move: up");
-    }, 100);
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 100);
   });
 
   return conn;
